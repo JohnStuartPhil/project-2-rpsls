@@ -37,5 +37,52 @@ function playGame(playerChoice) {
 
     let result = checkWinner(choices[computerChoice], choices[playerChoice]);
 
+    updateMessage(result);
+    
     updateScores(result);
+
+    
+}
+
+function checkWinner(computerChoice, playerChoice) {
+    if (computerChoice == playerChoice) {
+        return "draw"
+    } else if (playerChoice == "rock" && computerChoice == "scissors") {
+        return "player"
+    } else if (playerChoice == "rock" && computerChoice == "paper") {
+        return "computer"
+    } else if (playerChoice == "paper" && computerChoice == "rock") {
+        return "player"
+    } else if (playerChoice == "paper" && computerChoice == "scissors") {
+        return "computer"
+    } else if (playerChoice == "scissors" && computerChoice == "paper") {
+        return "player"
+    } else if (playerChoice == "scissors" && computerChoice == "rock") {
+        return "computer"
+    } 
+}
+
+function updateScores(result) {
+    if (result == "draw") {
+        return
+    }
+
+    let scoreSpan = document.getElementById(result + "score");
+    let score = scoreSpan.innerHTML;
+    score++;
+    scoreSpan.innerHTML = score;
+}
+
+function updateMessage(result) {
+    let message = ""
+    if (result == "draw") {
+        message = "It's a draw" 
+    } else if (result = "player") {
+        message = "Player Wins"
+    } else {
+        message = "Computer Wins"
+    }
+
+    let messagesDiv = document.getElementById("messages");
+    messagesDiv.innerHTML = message;
 }
