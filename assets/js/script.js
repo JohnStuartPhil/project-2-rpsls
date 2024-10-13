@@ -41,7 +41,6 @@ function playGame(playerChoice) {
     
     updateScores(result);
 
-    
 }
 
 function checkWinner(computerChoice, playerChoice) {
@@ -62,17 +61,6 @@ function checkWinner(computerChoice, playerChoice) {
     } 
 }
 
-function updateScores(result) {
-    if (result == "draw") {
-        return
-    }
-
-    let scoreSpan = document.getElementById(result + "score");
-    let score = scoreSpan.innerHTML;
-    score++;
-    scoreSpan.innerHTML = score;
-}
-
 function updateMessage(result) {
     let message = ""
     if (result == "draw") {
@@ -85,4 +73,15 @@ function updateMessage(result) {
 
     let messagesDiv = document.getElementById("messages");
     messagesDiv.innerHTML = message;
+}
+
+function updateScores(result) {
+    if (result == "draw") {
+        return
+    }
+
+    let scoreSpan = document.getElementById(result + "-score");
+    let score = scoreSpan.innerHTML;
+    score++;
+    scoreSpan.innerHTML = score;
 }
