@@ -8,7 +8,7 @@ const computerScore = document.getElementById("computer-score");
 const playerImage = document.getElementById("player-image");
 const computerImage = document.getElementById("computer-image");
 const messages = document.getElementById("messages");
-const choices = ["rock", "paper", "scissors", "lizzard", "spock"];
+const choices = ["rock", "paper", "scissors", "lizard", "spock"];
 
 
 /**
@@ -46,19 +46,51 @@ function playGame(playerChoice) {
 function checkWinner(computerChoice, playerChoice) {
     if (computerChoice == playerChoice) {
         return "draw"
+
     } else if (playerChoice == "rock" && computerChoice == "scissors") {
         return "player"
     } else if (playerChoice == "rock" && computerChoice == "paper") {
         return "computer"
-    } else if (playerChoice == "paper" && computerChoice == "rock") {
+    } else if (playerChoice == "rock" && computerChoice == "lizard") {
+        return "player" 
+    } else if (playerChoice == "rock" && computerChoice == "spock") {
+        return "computer"
+
+    }  else if (playerChoice == "paper" && computerChoice == "rock") {
         return "player"
     } else if (playerChoice == "paper" && computerChoice == "scissors") {
         return "computer"
+    }  else if (playerChoice == "paper" && computerChoice == "spock") {
+        return "player"
+    } else if (playerChoice == "paper" && computerChoice == "lizard") {
+        return "computer"
+
     } else if (playerChoice == "scissors" && computerChoice == "paper") {
         return "player"
     } else if (playerChoice == "scissors" && computerChoice == "rock") {
         return "computer"
-    } 
+    } else if (playerChoice == "scissors" && computerChoice == "lizard") {
+        return "player"
+    } else if (playerChoice == "scissors" && computerChoice == "spock") {
+        return "computer"
+
+    } else if (playerChoice == "lizard" && computerChoice == "paper") {
+        return "player"
+    } else if (playerChoice == "lizard" && computerChoice == "rock") {
+        return "computer"
+    } else if (playerChoice == "lizard" && computerChoice == "spock") {
+        return "player"
+    } else if (playerChoice == "lizard" && computerChoice == "scissors") {
+        return "computer"
+
+    } else if (playerChoice == "spock" && computerChoice == "rock") {
+        return "player"
+    } else if (playerChoice == "spock" && computerChoice == "paper") {
+        return "computer"
+    } else if (playerChoice == "spock" && computerChoice == "scissors") {
+        return "player"
+    } else if (playerChoice == "spock" && computerChoice == "lizard") 
+        return "computer"
 }
 
 function updateMessage(result) {
