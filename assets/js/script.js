@@ -8,7 +8,7 @@ const computerScore = document.getElementById("computer-score");
 const playerImage = document.getElementById("player-image");
 const computerImage = document.getElementById("computer-image");
 const messages = document.getElementById("messages");
-const choices = ["rock", "paper", "scissors"];
+const choices = ["rock", "paper", "scissors", "lizzard", "spock"];
 
 
 /**
@@ -30,7 +30,7 @@ function playGame(playerChoice) {
     playerImage.src = `assets/images/${choices[playerChoice]}.png`;
     playerImage.alt = choices[playerChoice];
 
-    let computerChoice = Math.floor(Math.random() * 3);
+    let computerChoice = Math.floor(Math.random() * 5);
 
     computerImage.src = `assets/images/${choices[computerChoice]}.png`;
     computerImage.alt = choices[computerChoice];
@@ -65,7 +65,7 @@ function updateMessage(result) {
     let message = ""
     if (result == "draw") {
         message = "It's a draw" 
-    } else if (result = "player") {
+    } else if (result == "player") {
         message = "Player Wins"
     } else {
         message = "Computer Wins"
