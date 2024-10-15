@@ -94,12 +94,12 @@ function checkWinner(computerChoice, playerChoice) {
 }
 
 function updateMessage(result) {
-    let message = ""
+    let message 
     if (result == "draw") {
         message = "It's a draw" 
     } else if (result == "player") {
         message = "Player Wins"
-    } else {
+    } else if (result == "computer") {
         message = "Computer Wins"
     }
 
@@ -117,6 +117,24 @@ function updateScores(result) {
     score++;
     scoreSpan.innerHTML = score;
 }
+
+
+function checkEndOfGame(playerScore, computerScore) {
+    if (playerScore === 2 || computerScore === 2) {
+        return "end"
+    } 
+}
+
+function updateEndMessage(result) {
+    let endMessage = ""
+    if (result == "end") {
+        endMessage = "End of game" 
+    } 
+    let endMessagesDiv = document.getElementById("end-message");
+    endMessagesDiv.innerHTML = endMessage;
+}
+
+
 
 // Get the modal
 var modal = document.getElementById("myModal");
