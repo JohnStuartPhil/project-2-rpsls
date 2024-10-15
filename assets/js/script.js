@@ -41,6 +41,8 @@ function playGame(playerChoice) {
     
     updateScores(result);
 
+    updateEndMessage(result);
+
 }
 
 function checkWinner(computerChoice, playerChoice) {
@@ -130,8 +132,8 @@ function updateEndMessage(result) {
     if (result == "end") {
         endMessage = "End of game" 
     } 
-    let endMessagesDiv = document.getElementById("end-message");
-    endMessagesDiv.innerHTML = endMessage;
+    let endMessageDiv = document.getElementById("end-message");
+    endMessageDiv.innerHTML = endMessage;
 }
 
 
