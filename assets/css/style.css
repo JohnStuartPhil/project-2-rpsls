@@ -53,6 +53,7 @@ footer {
     height: 20px;
 }
 
+
 .player {
     background-color: lightblue;
     float: left;
@@ -72,6 +73,11 @@ footer {
 #computer-image {
     width: 75%;
 }
+
+#end-message {
+    height: 20px;
+}
+
 
 /* The Modal (background) */
 .modal {
