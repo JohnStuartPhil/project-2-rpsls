@@ -41,6 +41,8 @@ function playGame(playerChoice) {
     
     updateScores(result);
 
+    checkEndOfGame(playerScore, computerScore);
+
     updateEndMessage(result);
 
 }
@@ -128,7 +130,7 @@ function checkEndOfGame(playerScore, computerScore) {
 }
 
 function updateEndMessage(result) {
-    let endMessage = ""
+    let endMessage 
     if (result == "end") {
         endMessage = "End of game" 
     } 
