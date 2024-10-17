@@ -9,6 +9,9 @@ const playerImage = document.getElementById("player-image");
 const computerImage = document.getElementById("computer-image");
 const messages = document.getElementById("messages");
 const choices = ["rock", "paper", "scissors", "lizard", "spock"];
+let result = ""
+let playScore = 0
+let compScore = 0
 
 
 /**
@@ -114,8 +117,7 @@ function updateMessage(result) {
 function updateScores(result) {
     if (result == "draw") {
         return
-    }
-
+    } 
     let scoreSpan = document.getElementById(result + "-score");
     let score = scoreSpan.innerHTML;
     score++;
@@ -124,16 +126,23 @@ function updateScores(result) {
 
 
 function checkEndOfGame(playerScore, computerScore) {
-    if (playerScore === 2 || computerScore === 2) {
-        return "end"
-    } 
+    if (playerScore === 3) {
+      result = "end-player"
+      return result
+    } else if (computerScore === 3) {
+        result = "end-computer"
+        return result
+   } 
 }
 
-function updateEndMessage(result) {
+function updateEndMessage() {
     let endMessage 
-    if (result == "end") {
-        endMessage = "End of game" 
-    } 
+
+    if (result == "end-player") {
+        endMessage = "End of game - Player Wins" 
+    } else (result == "end-computer")
+        endMessage = "End of game - Computer Wins"
+
     let endMessageDiv = document.getElementById("end-message");
     endMessageDiv.innerHTML = endMessage;
 }
