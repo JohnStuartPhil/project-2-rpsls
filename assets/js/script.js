@@ -9,6 +9,8 @@ const playerImage = document.getElementById("player-image");
 const computerImage = document.getElementById("computer-image");
 const messages = document.getElementById("messages");
 const choices = ["rock", "paper", "scissors", "lizard", "spock"];
+let pScore = 0;
+let cScore = 0;
 
 /**
  * Add event listener to all the functions
