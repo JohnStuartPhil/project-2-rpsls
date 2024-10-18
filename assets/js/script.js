@@ -9,10 +9,6 @@ const playerImage = document.getElementById("player-image");
 const computerImage = document.getElementById("computer-image");
 const messages = document.getElementById("messages");
 const choices = ["rock", "paper", "scissors", "lizard", "spock"];
-let result = ""
-let playScore = 0
-let compScore = 0
-
 
 /**
  * Add event listener to all the functions
@@ -125,19 +121,16 @@ function updateScores(result) {
 }
 
 
-function checkEndOfGame(playerScore, computerScore) {
-    if (playerScore === 3) {
+function checkEndOfGame() {
+    if (playerScore) {
       result = "end-player"
-      return result
-    } else if (computerScore === 3) {
+    } else if (computerScore) {
         result = "end-computer"
-        return result
    } 
 }
 
 function updateEndMessage() {
     let endMessage 
-
     if (result == "end-player") {
         endMessage = "End of game - Player Wins" 
     } else (result == "end-computer")
