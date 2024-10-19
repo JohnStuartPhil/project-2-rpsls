@@ -44,7 +44,7 @@ function playGame(playerChoice) {
 
     checkScores(playerChoice, computerChoice);
 
-    checkEndOfGame(playerScore, computerScore);
+    checkEndOfGame(pScore, cScore);
 
     updateEndMessage(result);
 
