@@ -189,7 +189,7 @@ function checkScores(playerChoice, computerChoice) {
 
     }
 
-function checkEndOfGame() {
+function checkEndOfGame(pScore, cScore) {
     if (pScore === 5) {
       return "end-player"
     } else if (cScore === 5) {
@@ -197,7 +197,7 @@ function checkEndOfGame() {
    } 
 }
 
-function updateEndMessage() {
+function updateEndMessage(result) {
     let endMessage 
     if (result == "end-player") {
         endMessage = "End of game - Player Wins" 
