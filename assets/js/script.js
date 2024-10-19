@@ -42,6 +42,8 @@ function playGame(playerChoice) {
     
     updateScores(result);
 
+    checkScores(pScore, cScore);
+
     checkEndOfGame(playerScore, computerScore);
 
     updateEndMessage(result);
@@ -123,11 +125,75 @@ function updateScores(result) {
 }
 
 
+function checkScores() {
+
+    if (playerChoice === "rock") {
+        if (computerChoice === "paper") 
+            cScore++
+        else if (computerChoice === "scissors")
+            pScore++ 
+        else if (computerChoice === "lizard")
+            pScore++ 
+        else if (computerChoice === "spock")
+            cScore++
+    } 
+        
+
+    if (playerChoice === "paper") {
+        if (computerChoice === "rock") 
+            pScore++
+        else if (computerChoice === "scissors")
+            cScore++ 
+        else if (computerChoice === "lizard")
+            cScore++ 
+        else if (computerChoice === "spock")
+            pScore++
+    }  
+    
+
+    if (playerChoice === "scissors") {
+        if (computerChoice === "rock") 
+            cScore++
+        else if (computerChoice === "paper")
+            pScore++ 
+        else if (computerChoice === "lizard")
+            pScore++ 
+        else if (computerChoice === "spock")
+            cScore++
+    } 
+    
+
+    if (playerChoice === "lizard") {
+        if (computerChoice === "rock") 
+            cScore++
+        else if (computerChoice === "paper")
+            pScore++ 
+        else if (computerChoice === "scissors")
+            cScore++ 
+        else if (computerChoice === "spock")
+            pScore++
+    }   
+    
+
+    if (playerChoice === "spock") {
+        if (computerChoice === "rock") 
+            pScore++
+        else if (computerChoice === "paper")
+            cScore++ 
+        else if (computerChoice === "scissors")
+            pScore++ 
+        else if (computerChoice === "lizard")
+            cScore++
+    }
+    
+
+    }
+
 function checkEndOfGame() {
-    if (playerScore) {
-      result = "end-player"
-    } else if (computerScore) {
-        result = "end-computer"
+    if (pScore === 5) {
+      return "end-player"
+    } else if (cScore === 5) {
+        return "end-computer"
    } 
 }
 
