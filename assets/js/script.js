@@ -139,7 +139,7 @@ function checkScores() {
     } 
         
 
-    if (playerChoice === "paper") {
+    else if (playerChoice === "paper") {
         if (computerChoice === "rock") 
             pScore++
         else if (computerChoice === "scissors")
@@ -151,7 +151,7 @@ function checkScores() {
     }  
     
 
-    if (playerChoice === "scissors") {
+    else if (playerChoice === "scissors") {
         if (computerChoice === "rock") 
             cScore++
         else if (computerChoice === "paper")
@@ -163,7 +163,7 @@ function checkScores() {
     } 
     
 
-    if (playerChoice === "lizard") {
+    else if (playerChoice === "lizard") {
         if (computerChoice === "rock") 
             cScore++
         else if (computerChoice === "paper")
@@ -175,7 +175,7 @@ function checkScores() {
     }   
     
 
-    if (playerChoice === "spock") {
+    else if (playerChoice === "spock") {
         if (computerChoice === "rock") 
             pScore++
         else if (computerChoice === "paper")
