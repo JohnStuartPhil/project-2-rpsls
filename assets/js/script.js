@@ -15,11 +15,28 @@ let cScore = 0;
 /**
  * Add event listener to all the functions
  */
-for (let button of buttons) {
-    button.addEventListener("click", function () {
-        let playerChoice = this.getAttribute("data-choice");
-        playGame(playerChoice);
-    });
+// for (let button of buttons) {
+//     button.addEventListener("click", function () {
+//         let playerChoice = this.getAttribute("data-choice");
+//         playGame(playerChoice);
+//     });
+// }
+
+function addListenersToControlButtons() {
+    for (let button of buttons) {
+        button.addEventListener("click", getPlayerChoice)
+    }
+}
+
+function getPlayerChoice(event) {
+    let playerChoice = event.target.getAttribute("data-choice");
+    playGame(playerChoice);
+}
+
+function removeListenersToControlButtons() {
+    for (let button of buttons) {
+        button.removeEventListener("click", getPlayerChoice)
+    }
 }
 
 /**
@@ -39,14 +56,12 @@ function playGame(playerChoice) {
     let result = checkWinner(choices[computerChoice], choices[playerChoice]);
 
     updateMessage(result);
-    
+
     updateScores(result);
 
-    checkScores(playerChoice, computerChoice);
+    let endOfGame = checkEndOfGame();
 
-    checkEndOfGame(pScore, cScore);
-
-    updateEndMessage(result);
+    updateEndMessage(endOfGame);
 
 }
 
@@ -59,15 +74,15 @@ function checkWinner(computerChoice, playerChoice) {
     } else if (playerChoice == "rock" && computerChoice == "paper") {
         return "computer"
     } else if (playerChoice == "rock" && computerChoice == "lizard") {
-        return "player" 
+        return "player"
     } else if (playerChoice == "rock" && computerChoice == "spock") {
         return "computer"
 
-    }  else if (playerChoice == "paper" && computerChoice == "rock") {
+    } else if (playerChoice == "paper" && computerChoice == "rock") {
         return "player"
     } else if (playerChoice == "paper" && computerChoice == "scissors") {
         return "computer"
-    }  else if (playerChoice == "paper" && computerChoice == "spock") {
+    } else if (playerChoice == "paper" && computerChoice == "spock") {
         return "player"
     } else if (playerChoice == "paper" && computerChoice == "lizard") {
         return "computer"
@@ -96,14 +111,14 @@ function checkWinner(computerChoice, playerChoice) {
         return "computer"
     } else if (playerChoice == "spock" && computerChoice == "scissors") {
         return "player"
-    } else if (playerChoice == "spock" && computerChoice == "lizard") 
+    } else if (playerChoice == "spock" && computerChoice == "lizard")
         return "computer"
 }
 
 function updateMessage(result) {
-    let message 
+    let message
     if (result == "draw") {
-        message = "It's a draw" 
+        message = "It's a draw"
     } else if (result == "player") {
         message = "Player Wins"
     } else if (result == "computer") {
@@ -117,76 +132,44 @@ function updateMessage(result) {
 function updateScores(result) {
     if (result == "draw") {
         return
-    } 
+    }
+
     let scoreSpan = document.getElementById(result + "-score");
-    let score = scoreSpan.innerHTML;
-    score++;
+    //let score = scoreSpan.innerHTML;
+    //score++;
+    let score 
+    if (result == "player") {
+        pScore++
+        console.log(pScore)
+        score = pScore
+    } else if (result == "computer") {
+        cScore++
+        console.log(cScore)
+        score = cScore
+}
     scoreSpan.innerHTML = score;
 }
 
 
-function checkScores(playerChoice, computerChoice) {
 
-        if (playerChoice === "rock" && computerChoice === "paper") 
-            cScore++
-        else if (playerChoice === "rock" && computerChoice === "scissors")
-            pScore++ 
-        else if (playerChoice === "rock" && computerChoice === "lizard")
-            pScore++ 
-        else if (playerChoice === "rock" && computerChoice === "spock")
-            cScore++
-    
-        else if (playerChoice === "paper" && computerChoice === "rock") 
-            pScore++
-        else if (playerChoice === "paper" && computerChoice === "scissors")
-            cScore++ 
-        else if (playerChoice === "paper" && computerChoice === "lizard")
-            cScore++ 
-        else if (playerChoice === "paper" && computerChoice === "spock")
-            pScore++
-    
-        else if (playerChoice === "scissors" &&computerChoice === "rock") 
-            cScore++
-        else if (playerChoice === "scissors" &&computerChoice === "paper")
-            pScore++ 
-        else if (playerChoice === "scissors" &&computerChoice === "lizard")
-            pScore++ 
-        else if (playerChoice === "scissors" &&computerChoice === "spock")
-            cScore++
-    
-        else if (playerChoice === "lizard" && computerChoice === "rock") 
-            cScore++
-        else if (playerChoice === "lizard" && computerChoice === "paper")
-            pScore++ 
-        else if (playerChoice === "lizard" && computerChoice === "scissors")
-            cScore++ 
-        else if (playerChoice === "lizard" && computerChoice === "spock")
-            pScore++
-      
-        else if (playerChoice === "spock" &&computerChoice === "rock") 
-            pScore++
-        else if (playerChoice === "spock" &&computerChoice === "paper")
-            cScore++ 
-        else if (playerChoice === "spock" &&computerChoice === "scissors")
-            pScore++ 
-        else if (playerChoice === "spock" &&computerChoice === "lizard")
-            cScore++
-    }
-
-function checkEndOfGame(pScore, cScore) {
+function checkEndOfGame() {
     if (pScore === 5) {
-      return "end-player"
+        return "end-player"
     } else if (cScore === 5) {
         return "end-computer"
-   } 
+    } 
+    return "next-round"
 }
 
-function updateEndMessage(result) {
-    let endMessage 
-    if (result == "end-player") {
-        endMessage = "End of game - Player Wins" 
-    } else (result == "end-computer")
-        endMessage = "End of game - Computer Wins"
+function updateEndMessage(endOfGame) {
+    let endMessage
+    if (endOfGame == "end-player") {
+        endMessage = "End of game - Player Wins"
+    } else if (endOfGame == "end-computer") {
+    endMessage = "End of game - Computer Wins"
+    } else {
+        endMessage = "Continue playing"
+    }
 
     let endMessageDiv = document.getElementById("end-message");
     endMessageDiv.innerHTML = endMessage;
@@ -204,22 +187,22 @@ var btn = document.getElementById("myBtn");
 var span = document.getElementsByClassName("close")[0];
 
 // When the user clicks on the button, open the modal
-btn.onclick = function() {
-  modal.style.display = "block";
-  let modalButton = document.getElementById('myBtn');
-  modalButton.textContent = "Click x to close";
+btn.onclick = function () {
+    modal.style.display = "block";
+    let modalButton = document.getElementById('myBtn');
+    modalButton.textContent = "Click x to close";
 }
 
 // When the user clicks on <span> (x), close the modal
-span.onclick = function() {
-  modal.style.display = "none";
-  let modalButtonA = document.getElementById('myBtn');
-  modalButtonA.textContent = "Click here for instructions";
+span.onclick = function () {
+    modal.style.display = "none";
+    let modalButtonA = document.getElementById('myBtn');
+    modalButtonA.textContent = "Click here for instructions";
 }
 
 // When the user clicks anywhere outside of the modal, close it
 //window.onclick = function(event) {
-  //if (event.target == modal) {
-    //modal.style.display = "none";
-  //}
+//if (event.target == modal) {
+//modal.style.display = "none";
+//}
 //}
