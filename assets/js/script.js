@@ -42,7 +42,7 @@ function playGame(playerChoice) {
     
     updateScores(result);
 
-    checkScores(pScore, cScore);
+    checkScores(playerChoice, computerChoice);
 
     checkEndOfGame(playerScore, computerScore);
 
@@ -125,7 +125,7 @@ function updateScores(result) {
 }
 
 
-function checkScores() {
+function checkScores(playerChoice, computerChoice) {
 
     if (playerChoice === "rock") {
         if (computerChoice === "paper") 
