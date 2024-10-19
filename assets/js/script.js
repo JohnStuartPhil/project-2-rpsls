@@ -5,12 +5,21 @@
 const buttons = document.getElementsByClassName("control");
 const playerScore = document.getElementById("player-score");
 const computerScore = document.getElementById("computer-score");
-const playerImage = document.getElementById("player-image");
-const computerImage = document.getElementById("computer-image");
+let playerImage = document.getElementById("player-image");
+let computerImage = document.getElementById("computer-image");
 const messages = document.getElementById("messages");
 const choices = ["rock", "paper", "scissors", "lizard", "spock"];
 let pScore = 0;
 let cScore = 0;
+const game = `<div class="player">
+                <h2 class="scores">Your score: <span id="player-score">0</span></h2>
+                <img id="player-image" src="assets/images/rpsls.png" alt="Rock Paper Scissors Lizard Spock">
+            </div>
+
+            <div class="computer">
+                <h2 class="scores">Computer score: <span id="computer-score">0</span></h2>
+                <img id="computer-image" src="assets/images/rpsls.png" alt="Rock Paper Scissors Lizard Spock">
+            </div>`
 
 /**
  * Add event listener to all the functions
@@ -39,11 +48,53 @@ function removeListenersToControlButtons() {
     }
 }
 
+function addListenerToEndGameButton() {
+    let button = document.getElementById("play-again")
+    button.addEventListener("click", startAgain)
+}
+
+function removeListenerToEndGameButton() {
+    let button = document.getElementById("play-again")
+    button.removeEventListener("click", startAgain)
+}
+
+function startAgain() {
+    removeListenerToEndGameButton()
+    let container = document.getElementById("game-container")
+    container.innerHTML = game
+    pScore = 0;
+    cScore = 0;
+    playerImage = document.getElementById("player-image");
+    computerImage = document.getElementById("computer-image");
+    addListenersToControlButtons()
+}
+
+function endGameMenu(endOfGame) {
+    let container = document.getElementById("game-container")
+    let heading 
+    if (endOfGame == "end-player") {
+        heading = `<h2>You won</h2>`
+    } else {
+        heading = `<h2>Computer won</h2>`
+    }
+       
+    let message = `<p>Thank you for playing. To play again click on play again button</p>`
+    let button = `<button id="play-again">Play again</button>`
+    container.innerHTML = heading + message + button
+    addListenerToEndGameButton()
+
+    
+    }
+
+
+
 /**
  * The main game function. Accepts one paramter, which 
  * is the data choice value of the selected button
  */
 function playGame(playerChoice) {
+
+    removeListenersToControlButtons();
 
     playerImage.src = `assets/images/${choices[playerChoice]}.png`;
     playerImage.alt = choices[playerChoice];
@@ -63,6 +114,11 @@ function playGame(playerChoice) {
 
     updateEndMessage(endOfGame);
 
+    if (endOfGame == "next-round") {
+        addListenersToControlButtons()
+    } else {
+        endGameMenu(endOfGame) 
+    }
 }
 
 function checkWinner(computerChoice, playerChoice) {
@@ -153,9 +209,9 @@ function updateScores(result) {
 
 
 function checkEndOfGame() {
-    if (pScore === 5) {
+    if (pScore === 3) {
         return "end-player"
-    } else if (cScore === 5) {
+    } else if (cScore === 3) {
         return "end-computer"
     } 
     return "next-round"
@@ -175,7 +231,7 @@ function updateEndMessage(endOfGame) {
     endMessageDiv.innerHTML = endMessage;
 }
 
-
+addListenersToControlButtons()
 
 // Get the modal
 var modal = document.getElementById("myModal");
