@@ -125,7 +125,7 @@ function updateScores(result) {
 }
 
 
-function checkScores(computerChoice, playerChoice) {
+function checkScores(playerChoice, computerChoice) {
 
         if (playerChoice === "rock" && computerChoice === "paper") 
             cScore++
