@@ -125,68 +125,52 @@ function updateScores(result) {
 }
 
 
-function checkScores(playerChoice, computerChoice) {
+function checkScores(computerChoice, playerChoice) {
 
-    if (playerChoice === "rock") {
-        if (computerChoice === "paper") 
+        if (playerChoice === "rock" && computerChoice === "paper") 
             cScore++
-        else if (computerChoice === "scissors")
+        else if (playerChoice === "rock" && computerChoice === "scissors")
             pScore++ 
-        else if (computerChoice === "lizard")
+        else if (playerChoice === "rock" && computerChoice === "lizard")
             pScore++ 
-        else if (computerChoice === "spock")
+        else if (playerChoice === "rock" && computerChoice === "spock")
             cScore++
-    } 
-        
-
-    else if (playerChoice === "paper") {
-        if (computerChoice === "rock") 
-            pScore++
-        else if (computerChoice === "scissors")
-            cScore++ 
-        else if (computerChoice === "lizard")
-            cScore++ 
-        else if (computerChoice === "spock")
-            pScore++
-    }  
     
-
-    else if (playerChoice === "scissors") {
-        if (computerChoice === "rock") 
-            cScore++
-        else if (computerChoice === "paper")
-            pScore++ 
-        else if (computerChoice === "lizard")
-            pScore++ 
-        else if (computerChoice === "spock")
-            cScore++
-    } 
-    
-
-    else if (playerChoice === "lizard") {
-        if (computerChoice === "rock") 
-            cScore++
-        else if (computerChoice === "paper")
-            pScore++ 
-        else if (computerChoice === "scissors")
-            cScore++ 
-        else if (computerChoice === "spock")
+        else if (playerChoice === "paper" && computerChoice === "rock") 
             pScore++
-    }   
-    
-
-    else if (playerChoice === "spock") {
-        if (computerChoice === "rock") 
-            pScore++
-        else if (computerChoice === "paper")
+        else if (playerChoice === "paper" && computerChoice === "scissors")
             cScore++ 
-        else if (computerChoice === "scissors")
-            pScore++ 
-        else if (computerChoice === "lizard")
-            cScore++
-    }
+        else if (playerChoice === "paper" && computerChoice === "lizard")
+            cScore++ 
+        else if (playerChoice === "paper" && computerChoice === "spock")
+            pScore++
     
-
+        else if (playerChoice === "scissors" &&computerChoice === "rock") 
+            cScore++
+        else if (playerChoice === "scissors" &&computerChoice === "paper")
+            pScore++ 
+        else if (playerChoice === "scissors" &&computerChoice === "lizard")
+            pScore++ 
+        else if (playerChoice === "scissors" &&computerChoice === "spock")
+            cScore++
+    
+        else if (playerChoice === "lizard" && computerChoice === "rock") 
+            cScore++
+        else if (playerChoice === "lizard" && computerChoice === "paper")
+            pScore++ 
+        else if (playerChoice === "lizard" && computerChoice === "scissors")
+            cScore++ 
+        else if (playerChoice === "lizard" && computerChoice === "spock")
+            pScore++
+      
+        else if (playerChoice === "spock" &&computerChoice === "rock") 
+            pScore++
+        else if (playerChoice === "spock" &&computerChoice === "paper")
+            cScore++ 
+        else if (playerChoice === "spock" &&computerChoice === "scissors")
+            pScore++ 
+        else if (playerChoice === "spock" &&computerChoice === "lizard")
+            cScore++
     }
 
 function checkEndOfGame(pScore, cScore) {
