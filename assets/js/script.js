@@ -253,7 +253,7 @@ btn.addEventListener("click", openInstructionsModal)
 function openInstructionsModal() {
     modal.style.display = "block";
     let modalButton = document.getElementById('myBtn');
-    modalButton.textContent = "Click x to close";
+    modalButton.textContent = "Click anywhere to close";
 }
 
 // When the user clicks on <span> (x), close the modal
