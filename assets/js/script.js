@@ -209,9 +209,9 @@ function updateScores(result) {
 
 
 function checkEndOfGame() {
-    if (pScore === 3) {
+    if (pScore === 10) {
         return "end-player"
-    } else if (cScore === 3) {
+    } else if (cScore === 10) {
         return "end-computer"
     } 
     return "next-round"
