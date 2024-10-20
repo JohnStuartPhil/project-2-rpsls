@@ -3,11 +3,11 @@
  * and possible choices
  */
 const buttons = document.getElementsByClassName("control");
-const playerScore = document.getElementById("player-score");
-const computerScore = document.getElementById("computer-score");
+//const playerScore = document.getElementById("player-score");
+//const computerScore = document.getElementById("computer-score");
 let playerImage = document.getElementById("player-image");
 let computerImage = document.getElementById("computer-image");
-const messages = document.getElementById("messages");
+//const messages = document.getElementById("messages");
 const choices = ["rock", "paper", "scissors", "lizard", "spock"];
 let pScore = 0;
 let cScore = 0;
