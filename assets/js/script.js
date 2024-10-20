@@ -19,7 +19,7 @@ const game = `<div class="player">
             <div class="computer">
                 <h2 class="scores">Computer score: <span id="computer-score">0</span></h2>
                 <img id="computer-image" src="assets/images/rpsls.png" alt="Rock Paper Scissors Lizard Spock">
-            </div>`
+            </div>`;
 
 /**
  * Add event listener to all the functions
@@ -33,7 +33,7 @@ const game = `<div class="player">
 
 function addListenersToControlButtons() {
     for (let button of buttons) {
-        button.addEventListener("click", getPlayerChoice)
+        button.addEventListener("click", getPlayerChoice);
     }
 }
 
@@ -44,44 +44,44 @@ function getPlayerChoice(event) {
 
 function removeListenersToControlButtons() {
     for (let button of buttons) {
-        button.removeEventListener("click", getPlayerChoice)
+        button.removeEventListener("click", getPlayerChoice);
     }
 }
 
 function addListenerToEndGameButton() {
-    let button = document.getElementById("play-again")
-    button.addEventListener("click", startAgain)
+    let button = document.getElementById("play-again");
+    button.addEventListener("click", startAgain);
 }
 
 function removeListenerToEndGameButton() {
-    let button = document.getElementById("play-again")
-    button.removeEventListener("click", startAgain)
+    let button = document.getElementById("play-again");
+    button.removeEventListener("click", startAgain);
 }
 
 function startAgain() {
-    removeListenerToEndGameButton()
-    let container = document.getElementById("game-container")
-    container.innerHTML = game
+    removeListenerToEndGameButton();
+    let container = document.getElementById("game-container");
+    container.innerHTML = game;
     pScore = 0;
     cScore = 0;
     playerImage = document.getElementById("player-image");
     computerImage = document.getElementById("computer-image");
-    addListenersToControlButtons()
+    addListenersToControlButtons();
 }
 
 function endGameMenu(endOfGame) {
-    let container = document.getElementById("game-container")
-    let heading 
+    let container = document.getElementById("game-container");
+    let heading; 
     if (endOfGame == "end-player") {
         heading = `<h2>You won</h2>`
     } else {
         heading = `<h2>Computer won</h2>`
     }
        
-    let message = `<p>Thank you for playing. To play again click on play again button</p>`
-    let button = `<button id="play-again">Play again</button>`
-    container.innerHTML = heading + message + button
-    addListenerToEndGameButton()
+    let message = `<p>Thank you for playing. To play again click on play again button</p>`;
+    let button = `<button id="play-again">Play again</button>`;
+    container.innerHTML = heading + message + button;
+    addListenerToEndGameButton();
 
     
     }
@@ -115,70 +115,70 @@ function playGame(playerChoice) {
     updateEndMessage(endOfGame);
 
     if (endOfGame == "next-round") {
-        addListenersToControlButtons()
+        addListenersToControlButtons();
     } else {
-        endGameMenu(endOfGame) 
+        endGameMenu(endOfGame);
     }
 }
 
 function checkWinner(computerChoice, playerChoice) {
     if (computerChoice == playerChoice) {
-        return "draw"
+        return "draw";
 
     } else if (playerChoice == "rock" && computerChoice == "scissors") {
-        return "player"
+        return "player";
     } else if (playerChoice == "rock" && computerChoice == "paper") {
-        return "computer"
+        return "computer";
     } else if (playerChoice == "rock" && computerChoice == "lizard") {
-        return "player"
+        return "player";
     } else if (playerChoice == "rock" && computerChoice == "spock") {
-        return "computer"
+        return "computer";
 
     } else if (playerChoice == "paper" && computerChoice == "rock") {
-        return "player"
+        return "player";
     } else if (playerChoice == "paper" && computerChoice == "scissors") {
-        return "computer"
+        return "computer";
     } else if (playerChoice == "paper" && computerChoice == "spock") {
-        return "player"
+        return "player";
     } else if (playerChoice == "paper" && computerChoice == "lizard") {
-        return "computer"
+        return "computer";
 
     } else if (playerChoice == "scissors" && computerChoice == "paper") {
-        return "player"
+        return "player";
     } else if (playerChoice == "scissors" && computerChoice == "rock") {
-        return "computer"
+        return "computer";
     } else if (playerChoice == "scissors" && computerChoice == "lizard") {
-        return "player"
+        return "player";
     } else if (playerChoice == "scissors" && computerChoice == "spock") {
-        return "computer"
+        return "computer";
 
     } else if (playerChoice == "lizard" && computerChoice == "paper") {
-        return "player"
+        return "player";
     } else if (playerChoice == "lizard" && computerChoice == "rock") {
-        return "computer"
+        return "computer";
     } else if (playerChoice == "lizard" && computerChoice == "spock") {
-        return "player"
+        return "player";
     } else if (playerChoice == "lizard" && computerChoice == "scissors") {
-        return "computer"
+        return "computer";
 
     } else if (playerChoice == "spock" && computerChoice == "rock") {
-        return "player"
+        return "player";
     } else if (playerChoice == "spock" && computerChoice == "paper") {
-        return "computer"
+        return "computer";
     } else if (playerChoice == "spock" && computerChoice == "scissors") {
-        return "player"
+        return "player";
     } else if (playerChoice == "spock" && computerChoice == "lizard")
-        return "computer"
+        return "computer";
 }
 
 function updateMessage(result) {
-    let message
+    let message;
     if (result == "draw") {
-        message = "It's a draw"
+        message = "It's a draw";
     } else if (result == "player") {
-        message = "Player Wins"
+        message = "Player Wins";
     } else if (result == "computer") {
-        message = "Computer Wins"
+        message = "Computer Wins";
     }
 
     let messagesDiv = document.getElementById("messages");
@@ -187,21 +187,21 @@ function updateMessage(result) {
 
 function updateScores(result) {
     if (result == "draw") {
-        return
+        return;
     }
 
     let scoreSpan = document.getElementById(result + "-score");
     //let score = scoreSpan.innerHTML;
     //score++;
-    let score 
+    let score; 
     if (result == "player") {
-        pScore++
-        console.log(pScore)
-        score = pScore
+        pScore++;
+        console.log(pScore);
+        score = pScore;
     } else if (result == "computer") {
-        cScore++
-        console.log(cScore)
-        score = cScore
+        cScore++;
+        console.log(cScore);
+        score = cScore;
 }
     scoreSpan.innerHTML = score;
 }
@@ -210,28 +210,28 @@ function updateScores(result) {
 
 function checkEndOfGame() {
     if (pScore === 10) {
-        return "end-player"
+        return "end-player";
     } else if (cScore === 10) {
-        return "end-computer"
+        return "end-computer";
     } 
-    return "next-round"
+    return "next-round";
 }
 
 function updateEndMessage(endOfGame) {
-    let endMessage
+    let endMessage;
     if (endOfGame == "end-player") {
-        endMessage = "End of game - Player Wins"
+        endMessage = "End of game - Player Wins";
     } else if (endOfGame == "end-computer") {
-    endMessage = "End of game - Computer Wins"
+    endMessage = "End of game - Computer Wins";
     } else {
-        endMessage = "Continue playing"
+        endMessage = "Continue playing";
     }
 
     let endMessageDiv = document.getElementById("end-message");
     endMessageDiv.innerHTML = endMessage;
 }
 
-addListenersToControlButtons()
+addListenersToControlButtons();
 
 // Get the modal
 let modal = document.getElementById("myModal");
@@ -249,7 +249,7 @@ let span = document.getElementsByClassName("close")[0];
 //     modalButton.textContent = "Click x to close";
 // }
 
-btn.addEventListener("click", openInstructionsModal)
+btn.addEventListener("click", openInstructionsModal);
 function openInstructionsModal() {
     modal.style.display = "block";
     let modalButton = document.getElementById('myBtn');
@@ -263,8 +263,8 @@ function openInstructionsModal() {
 //     modalButtonA.textContent = "Click here for instructions";
 // }
 
-modal.addEventListener("click", closeInstructionsModal)
-span.addEventListener("click", closeInstructionsModal)
+modal.addEventListener("click", closeInstructionsModal);
+span.addEventListener("click", closeInstructionsModal);
 function closeInstructionsModal() {
     modal.style.display = "none";
     let modalButtonA = document.getElementById('myBtn');
