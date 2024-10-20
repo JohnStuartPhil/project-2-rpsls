@@ -73,9 +73,9 @@ function endGameMenu(endOfGame) {
     let container = document.getElementById("game-container");
     let heading; 
     if (endOfGame == "end-player") {
-        heading = `<h2>You won</h2>`
+        heading = `<h2>You won</h2>`;
     } else {
-        heading = `<h2>Computer won</h2>`
+        heading = `<h2>Computer won</h2>`;
     }
        
     let message = `<p>Thank you for playing. To play again click on play again button</p>`;
