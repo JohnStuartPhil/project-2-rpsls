@@ -66,7 +66,7 @@ footer {
     background-color: lightblue;
     float: left;
     width: 45%;
-    
+    border-style: solid;
 }
 
 #player-image {
@@ -74,7 +74,7 @@ footer {
 }
 
 #player-score {
-    font-size: 15px;
+    font-size: 11px;
 }
 
 .computer {
@@ -82,7 +82,7 @@ footer {
     background-color: lightcoral;
     float: right;
     width: 45%;
-    
+    border-style: solid;
 }
 
 #computer-image {
@@ -90,7 +90,7 @@ footer {
 }
 
 #computer-score {
-    font-size: 15px;
+    font-size: 11px;
 }
 
 #end-message {
@@ -99,7 +99,7 @@ footer {
 }
 
 .scores {
-    font-size: 15px;
+    font-size: 11px;
 }
 
 /* The Modal (background) */
