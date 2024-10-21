@@ -70,7 +70,8 @@ footer {
 }
 
 #player-image {
-    width: 75%;
+    width: 50%;
+    height: 50%;
 }
 
 #player-score {
@@ -86,7 +87,8 @@ footer {
 }
 
 #computer-image {
-    width: 75%;
+    width: 50%;
+    height: 50%;
 }
 
 #computer-score {
