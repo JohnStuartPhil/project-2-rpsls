@@ -82,9 +82,8 @@ function endGameMenu(endOfGame) {
     let button = `<button id="play-again">Play again</button>`;
     container.innerHTML = heading + message + button;
     addListenerToEndGameButton();
-
-    
     }
+
 
 
 
