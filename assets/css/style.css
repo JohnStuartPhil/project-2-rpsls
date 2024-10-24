@@ -54,7 +54,7 @@ header {
     background-color: rgb(85, 138, 156);
     float: left;
     width: 45%;
-    border-style: solid;
+    /*border-style: solid;*/
 }
 
 #player-image {
@@ -71,7 +71,7 @@ header {
     background-color: rgb(170, 48, 48);
     float: right;
     width: 45%;
-    border-style: solid;
+    /*border-style: solid;*/
 }
 
 #computer-image {
