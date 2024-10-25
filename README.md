@@ -64,11 +64,23 @@ The rules of Rock, Paper, Scissors, Lizard, Spock expand on the rules of Rock, P
 
 **HTML testing, W3C validator**
 
-![W3C valdiator screenshot]()(assets/imagesforreadme/w3chtmlvalidator.PNG)
+![W3C valdiator screenshot](assets/imagesforreadme/w3chtmlvalidator.PNG)
 
 **CSS testing, Jigsaw validator**
 
 ![Jigsaw validator screenshot](assets/imagesforreadme/w3ccssvalidator.PNG)
+
+**Lighthouse for Desktop results**
+
+![Lighthouse for desktop results](assets/imagesforreadme/lighthousedesktop.PNG)
+
+**Lighthouse for Mobile results**
+
+![Lighthouse for mobile results](assets/imagesforreadme/lighthousemobile.PNG)
+
+**Wave results**
+
+![Wave results](assets/imagesforreadme/wave.PNG)
 
 ## Deployment 
 - The site was deployed to GitHub pages. The steps to deploy are as follows:
@@ -79,7 +91,7 @@ The rules of Rock, Paper, Scissors, Lizard, Spock expand on the rules of Rock, P
   - In the build and Deployment section, under the Branch section Main branch and Root file.
   - Within a few minutes the live site shall then be refreshed.
 
-The live link can be found here - [Rock, Paper, Scissors, Lizard, Spock]
+The live link can be found here - [Rock, Paper, Scissors, Lizard, Spock](https://johnstuartphil.github.io/project-2.1/)
 
 ## Credits 
 
