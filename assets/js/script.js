@@ -173,11 +173,11 @@ function checkWinner(computerChoice, playerChoice) {
 function updateMessage(result) {
     let message;
     if (result == "draw") {
-        message = "It's a draw";
+        message = "This one's a draw";
     } else if (result == "player") {
-        message = "Player Wins";
+        message = "Player wins this round";
     } else if (result == "computer") {
-        message = "Computer Wins";
+        message = "Computer wins this round";
     }
 
     let messagesDiv = document.getElementById("messages");

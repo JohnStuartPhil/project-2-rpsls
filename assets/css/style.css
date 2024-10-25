@@ -47,6 +47,7 @@ header {
     padding-top: 1rem;
     padding-bottom: 1rem;
     height: 20px;
+    color: rgb(202, 31, 31);
 }
 
 .player {
@@ -86,6 +87,7 @@ header {
 #end-message {
     padding-bottom: 1rem;
     height: 30px;
+    color: green;
 }
 
 .scores {
@@ -159,6 +161,95 @@ footer {
 
   /* Media queries */
   @media screen and (min-width: 768px) {
+
+    #game-title {
+        padding-top: 1rem;
+        font-size: 35px;
+    }
+
+    .control {
+        display: inline-block;
+        margin: 2px;
+        width: 80px;
+        height: 40px;
+    }
+
+    .player {
+        padding-top: 1rem;
+        background-color: rgb(85, 138, 156);
+        float: left;
+        width: 45%;
+        border-style: solid;
+    }
+    
+    #player-image {
+        width: 50%;
+        height: 50%;
+    }
+    
+    #player-score {
+        font-size: 11px;
+    }
+    
+    .computer {
+        padding-top: 1rem;
+        background-color: rgb(170, 48, 48);
+        float: right;
+        width: 45%;
+        border-style: solid;
+    }
+
+    #player-score {
+        font-size: 25px;
+    }
+
+    #computer-score {
+        font-size: 25px;
+    }
+
+    .scores {
+        font-size: 25px;
+    }
+
+    footer {
+        position: absolute;
+        width: 100%;
+        left: 0;
+        bottom: 0;
+        box-sizing: border-box;
+        min-height: 50px;
+        padding-top: 5px;
+        text-align: center;
+        color: #fff;
+        background-color: white;
+    }
+
+    /* The Modal (background) */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    /*top: 0;*/
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(61, 23, 23); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+  }
+  
+  /* Modal Content/Box */
+  .modal-content {
+    background-color: black;
+    margin: 15% auto; /* 15% from the top and centered */
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%; /* Could be more or less, depending on screen size */
+  }
+
+  }
+
+  @media screen and (min-width: 992px) {
 
     #game-title {
         padding-top: 1rem;
