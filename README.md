@@ -60,7 +60,7 @@ The rules of Rock, Paper, Scissors, Lizard, Spock expand on the rules of Rock, P
 
 **Javascript testing, JS Hint**
 
-![JS Hint screenshot]
+![JS Hint screenshot](assets/imagesforreadme/w3chtmlvalidator.PNG)
 
 **HTML testing, W3C validator**
 
