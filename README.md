@@ -124,7 +124,7 @@ The live link can be found here - [Rock, Paper, Scissors, Lizard, Spock](https:/
 - The icons used for the the Social Media links were taken from [Font Awesome](https://fontawesome.com/).
 - The Fav Icon was constructed from [Fav Icon](https://favicon.io/).
 - The Inter and Kannit fonts were taken from [Google Fonts](https://fonts.google.com/).
-- The Rock, Paper, Scissors, Lizard, Spock images were taken from [The Big Bang Theory Fandom](https://bigbangtheory.fandom.com/wiki/Rock,_Paper,_Scissors,_Lizard,_Spock?)file=RPSLS.png
+- The Rock, Paper, Scissors, Lizard, Spock images were taken from [The Big Bang Theory Fandom](https://bigbangtheory.fandom.com/wiki/Rock,_Paper,_Scissors,_Lizard,_Spock?)
 
 **Thanks to**
 
