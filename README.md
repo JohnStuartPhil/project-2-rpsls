@@ -31,8 +31,14 @@ The rules of Rock, Paper, Scissors, Lizard, Spock expand on the rules of Rock, P
   - The winner is announced to the user under the options button and the score is updated for either the user or the computer, depending on who won. 
   - The results and score are clear to the user, making the game easy to play, understand who won, and what the score is.
 
+  **At the start of the game:**
+
 ![Make a choice, buttons and two pictures](assets/imagesforreadme/makeachoicebuttonsandtwopictures.PNG)
+
+  **While the game is progressing:**
 ![Game in progress](assets/imagesforreadme/gameinprogress.PNG)
+
+  **At the end of the game:**
 ![End of Game](assets/imagesforreadme/endofgame.PNG)
 
 - **Instructions**
@@ -83,6 +89,21 @@ The rules of Rock, Paper, Scissors, Lizard, Spock expand on the rules of Rock, P
 **Wave results**
 
 ![Wave results](assets/imagesforreadme/wave.PNG)
+
+**Bugs**
+
+   - While using DevTools to test on mobile screens, I noticed that the Rock/Paper/Scissors/Lizard/Spock images were not loading.
+   - This was very much an intermiettent issue. Sometimes it was happing and sometimes it was not. 
+   - I tried clicking on each button leaving a few seconds in between.
+   - This was not an issue when testing on the desktop screens.
+
+![Images not loading on a mobile screen in DevTools](assets/imagesforreadme/missingpicturesonmobilescreens.PNG)
+
+   - With assitance from tutoring, it turned out that this was an issue with the internet at my end.
+
+![Internet Dropping](assets/imagesforreadme/internetdropping.PNG)
+
+  - I tested the live link directly on my on mobile phone directly using the Vodafone network. The images all loaded correctly.
 
 ## Deployment 
 - The site was deployed to GitHub pages. The steps to deploy are as follows:
