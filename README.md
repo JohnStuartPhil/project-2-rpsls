@@ -49,7 +49,7 @@ The rules of Rock, Paper, Scissors, Lizard, Spock expand on the rules of Rock, P
 ![Modal showing instructions](assets/imagesforreadme/modalshowinginstructions.PNG)
 
 ## Testing 
-  - I tested the webpage in different browsers: Chrome, Firefox, Microsoft Edge and WaveBrowser.
+  - I tested the webpage in different browsers: Chrome, Microsoft Edge and WaveBrowser.
   - I confirmed that the game results are always correct.
   - I confirmed that the header, instructions in the modal (in the footer) are all readable and easy to understand. 
   - I confimred that the colors and fonts chosen are easy to read and accessiable by running it through Lighthouse in Dev tools
