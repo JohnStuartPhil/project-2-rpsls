@@ -60,15 +60,15 @@ The rules of Rock, Paper, Scissors, Lizard, Spock expand on the rules of Rock, P
 
 **Javascript testing, JS Hint**
 
-![JS Hint screenshot](assets/imagesforreadme/w3chtmlvalidator.PNG)
+![JS Hint screenshot](assets/imagesforreadme/jshintvalidator.PNG)
 
 **HTML testing, W3C validator**
 
-![W3C valdiator screenshot]
+![W3C valdiator screenshot]()(assets/imagesforreadme/w3chtmlvalidator.PNG)
 
 **CSS testing, Jigsaw validator**
 
-![Jigsaw validator screenshot]
+![Jigsaw validator screenshot](assets/imagesforreadme/w3ccssvalidator.PNG)
 
 ## Deployment 
 - The site was deployed to GitHub pages. The steps to deploy are as follows:

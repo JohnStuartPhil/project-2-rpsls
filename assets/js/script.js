@@ -3,11 +3,8 @@
  * and possible choices
  */
 const buttons = document.getElementsByClassName("control");
-//const playerScore = document.getElementById("player-score");
-//const computerScore = document.getElementById("computer-score");
 let playerImage = document.getElementById("player-image");
 let computerImage = document.getElementById("computer-image");
-//const messages = document.getElementById("messages");
 const choices = ["rock", "paper", "scissors", "lizard", "spock"];
 let pScore = 0;
 let cScore = 0;
@@ -22,15 +19,8 @@ const game = `<div class="player">
             </div>`;
 
 /**
- * Add event listener to all the functions
+ * Add event listener to the functions
  */
-// for (let button of buttons) {
-//     button.addEventListener("click", function () {
-//         let playerChoice = this.getAttribute("data-choice");
-//         playGame(playerChoice);
-//     });
-// }
-
 function addListenersToControlButtons() {
     for (let button of buttons) {
         button.addEventListener("click", getPlayerChoice);
@@ -83,10 +73,6 @@ function endGameMenu(endOfGame) {
     container.innerHTML = heading + message + button;
     addListenerToEndGameButton();
     }
-
-
-
-
 /**
  * The main game function. Accepts one paramter, which 
  * is the data choice value of the selected button
@@ -120,6 +106,9 @@ function playGame(playerChoice) {
     }
 }
 
+/**
+ * The function to set the conditions of the potential outcomes
+ */
 function checkWinner(computerChoice, playerChoice) {
     if (computerChoice == playerChoice) {
         return "draw";
@@ -170,6 +159,9 @@ function checkWinner(computerChoice, playerChoice) {
         return "computer";
 }
 
+/**
+ *  The fucntion to give each message of each round
+ */
 function updateMessage(result) {
     let message;
     if (result == "draw") {
@@ -184,29 +176,28 @@ function updateMessage(result) {
     messagesDiv.innerHTML = message;
 }
 
+/**
+ *  The function to incrament and update the scores 
+ */
 function updateScores(result) {
     if (result == "draw") {
         return;
     }
-
     let scoreSpan = document.getElementById(result + "-score");
-    //let score = scoreSpan.innerHTML;
-    //score++;
     let score; 
     if (result == "player") {
         pScore++;
-        console.log(pScore);
         score = pScore;
     } else if (result == "computer") {
         cScore++;
-        console.log(cScore);
         score = cScore;
 }
     scoreSpan.innerHTML = score;
 }
 
-
-
+/**
+ * The function to end the game when either player or computer reaches 10 points
+ */
 function checkEndOfGame() {
     if (pScore === 10) {
         return "end-player";
@@ -216,6 +207,9 @@ function checkEndOfGame() {
     return "next-round";
 }
 
+/**
+ * The function to announce to either continue playing or when player or computer wins
+ */
 function updateEndMessage(endOfGame) {
     let endMessage;
     if (endOfGame == "end-player") {
@@ -225,7 +219,6 @@ function updateEndMessage(endOfGame) {
     } else {
         endMessage = "Continue playing";
     }
-
     let endMessageDiv = document.getElementById("end-message");
     endMessageDiv.innerHTML = endMessage;
 }
@@ -241,38 +234,25 @@ let btn = document.getElementById("myBtn");
 // Get the <span> element that closes the modal
 let span = document.getElementsByClassName("close")[0];
 
-// When the user clicks on the button, open the modal
-// btn.onclick = function () {
-//     modal.style.display = "block";
-//     let modalButton = document.getElementById('myBtn');
-//     modalButton.textContent = "Click x to close";
-// }
-
 btn.addEventListener("click", openInstructionsModal);
+
+/**
+ * Funtion to open the Modal
+ */
 function openInstructionsModal() {
     modal.style.display = "block";
     let modalButton = document.getElementById('myBtn');
     modalButton.textContent = "Click anywhere to close";
 }
 
-// When the user clicks on <span> (x), close the modal
-// span.onclick = function () {
-//     modal.style.display = "none";
-//     let modalButtonA = document.getElementById('myBtn');
-//     modalButtonA.textContent = "Click here for instructions";
-// }
-
 modal.addEventListener("click", closeInstructionsModal);
 span.addEventListener("click", closeInstructionsModal);
+
+/**
+ * Funtion to close the Modal
+ */
 function closeInstructionsModal() {
     modal.style.display = "none";
     let modalButtonA = document.getElementById('myBtn');
     modalButtonA.textContent = "Click here for instructions";
 }
-
-//When the user clicks anywhere outside of the modal, close it
-// window.onclick = function(event) {
-// if (event.target == modal) {
-// modal.style.display = "none";
-// }
-// }

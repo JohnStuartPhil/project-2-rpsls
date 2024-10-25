@@ -13,7 +13,6 @@ body {
 }
 
 /* Header and footer */
-
 header {
     text-align: center;
     height: 50px;
@@ -24,10 +23,7 @@ header {
     font-size: 15px;
 }
 
-
-
 /* Game area */
-
 .game-area {
     width: 75%;
     margin-left: auto;
@@ -107,13 +103,6 @@ footer {
     background-color: white;
 }
 
-#myBtn {
-    /* display: inline-block;
-    margin: 2px;
-    width: 100px;
-    height: 40px; */
-}
-
 #play-again {
     display: inline-block;
     margin: 2px;
@@ -134,7 +123,7 @@ footer {
     background-color: rgb(61, 23, 23); /* Fallback color */
     background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
   }
-  
+
   /* Modal Content/Box */
   .modal-content {
     background-color: black;
@@ -246,23 +235,19 @@ footer {
     border: 1px solid #888;
     width: 80%; /* Could be more or less, depending on screen size */
   }
-
   }
 
   @media screen and (min-width: 992px) {
-
     #game-title {
         padding-top: 1rem;
         font-size: 35px;
     }
-
     .control {
         display: inline-block;
         margin: 2px;
         width: 80px;
         height: 40px;
     }
-
     .player {
         padding-top: 1rem;
         background-color: rgb(85, 138, 156);
@@ -335,5 +320,4 @@ footer {
     border: 1px solid #888;
     width: 80%; /* Could be more or less, depending on screen size */
   }
-
   }
