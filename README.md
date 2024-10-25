@@ -32,6 +32,8 @@ The rules of Rock, Paper, Scissors, Lizard, Spock expand on the rules of Rock, P
   - The results and score are clear to the user, making the game easy to play, understand who won, and what the score is.
 
 ![Make a choice, buttons and two pictures](assets/imagesforreadme/makeachoicebuttonsandtwopictures.PNG)
+![Game in progress](assets/imagesforreadme/gameinprogress.PNG)
+![End of Game](assets/imagesforreadme/endofgame.PNG)
 
 - **Instructions**
 
