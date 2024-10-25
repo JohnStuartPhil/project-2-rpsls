@@ -64,7 +64,7 @@ The rules of Rock, Paper, Scissors, Lizard, Spock expand on the rules of Rock, P
 | 4  | Game Area   | Clicked on Lizard   | Brought up Lizard image and Computer brought up a random image   | Pass  |
 | 5 | Game Area  | Clicked on Spock   | Brought up Spock image and Computer brought up a random image   | Pass  |
 | 6 |  Game Area  | Clicked on buttons until either player or computer reached 10 points   | Brought up the screen stating who won and play again button  |  Pass |
-|  7 | End of Game Area   | Clicked on Splay again button   | Took back to the start of the ganme   |  Pass |
+|  7 | End of Game Area   | Clicked on play again button   | Took back to the start of the ganme   |  Pass |
 
 
 **Validator Testing**
