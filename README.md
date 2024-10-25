@@ -7,7 +7,7 @@ The rules of Rock, Paper Scissors are as follows: scissors cuts paper, paper cov
 
 The rules of Rock, Paper, Scissors, Lizard, Spock expand on the rules of Rock, Paper, Scissors and give a possible 10 outsomes: Scissors cuts Paper, Paper covers Rock, Rock crushes lizard, lizard poisons Spock, Spock smashes scissors, Scissors decapitates lizard, Lizard eats paper, Paper disproves Spock, Spock vaporizes rock, Rock crushes scissors. 
 
-![Website displayed on multiple screens]
+![Website displayed on multiple screens](assets/imagesforreadme/amiresponsive.PNG)
 
 ## Features 
 
@@ -16,13 +16,13 @@ The rules of Rock, Paper, Scissors, Lizard, Spock expand on the rules of Rock, P
   - Featured at the top of the page, the header shows the game name: Rock, Paper, Scissors, Lizard, Spock in a the kanit font and contrasts with the background. 
   - The header clearly tells the user what game they are playing. 
 
-![Header of the website]
+![Header of the website](assets/imagesforreadme/header.PNG)
 
 - **The Game Options**
 
   - The game options include a clear instruction and then a choice of options to choose from and to play: Rock, Paper, Scissors, Lizard or Spock. These options are interactive buttons that the user can click to make their choice and play their game. 
 
-![Make a choice and 5 buttons]
+![Click a button below to start](assets/imagesforreadme/clickabuttonbelowtostart.PNG)
 
 - **The Game Results**
 
@@ -31,14 +31,14 @@ The rules of Rock, Paper, Scissors, Lizard, Spock expand on the rules of Rock, P
   - The winner is announced to the user under the options button and the score is updated for either the user or the computer, depending on who won. 
   - The results and score are clear to the user, making the game easy to play, understand who won, and what the score is.
 
-![Make a choice, buttons and two pictures]
+![Make a choice, buttons and two pictures](assets/imagesforreadme/makeachoicebuttonsandtwopictures.PNG)
 
 - **Instructions**
 
   - The instructions are in a pop-up modal which is featured in the footer of the website. 
 
-![Modal before button pressed]
-![Modal showing instructions]
+![Modal before button pressed](assets/imagesforreadme/modalbeforebuttonpressed.PNG)
+![Modal showing instructions](assets/imagesforreadme/modalshowinginstructions.PNG)
 
 ## Testing 
   - I tested the webpage in different browsers: Chrome, Firefox, Microsoft Edge and WaveBrowser.
