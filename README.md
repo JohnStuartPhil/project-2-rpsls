@@ -54,6 +54,19 @@ The rules of Rock, Paper, Scissors, Lizard, Spock expand on the rules of Rock, P
   - I confirmed that the header, instructions in the modal (in the footer) are all readable and easy to understand. 
   - I confimred that the colors and fonts chosen are easy to read and accessiable by running it through Lighthouse in Dev tools
 
+**Summary of testing**
+
+| Test  | Section  | Action  | Result  | Pass/Fail  |
+|---|---|---|---|---|
+| 1  | Game Area  |Clicked on Rock   | Brought up Rock image and Computer brought up a random image  | Pass  |
+| 2  | Game Area  | Clicked on Paper  |  Brought up Paper image and Computer brought up a random image | Pass  |
+| 3  | Game Area  | Clicked on Scissors   | Brought up Scissors image and Computer brought up a random image  |  Pass |
+| 4  | Game Area   | Clicked on Lizard   | Brought up Lizard image and Computer brought up a random image   | Pass  |
+| 5 | Game Area  | Clicked on Spock   | Brought up Spock image and Computer brought up a random image   | Pass  |
+| 6 |  Game Area  | Clicked on buttons until either player or computer reached 10 points   | Brought up the screen stating who won and play again button  |  Pass |
+|  7 | End of Game Area   | Clicked on Splay again button   | Took back to the start of the ganme   |  Pass |
+
+
 **Validator Testing**
 - Javascript
   - No errors were retunred when passing through the official JS Hint.
