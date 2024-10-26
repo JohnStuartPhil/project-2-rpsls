@@ -95,7 +95,6 @@ The rules of Rock, Paper, Scissors, Lizard, Spock expand on the rules of Rock, P
 
 **Javascript testing, JS Hint**
 
-The link to the results can be found here - [RPSLS JS Hint Validation results]()
 ![JS Hint screenshot](assets/imagesforreadme/jshintvalidator.PNG)
 
 **HTML testing, W3C validator**
