@@ -96,14 +96,17 @@ The rules of Rock, Paper, Scissors, Lizard, Spock expand on the rules of Rock, P
 **Javascript testing, JS Hint**
 
 ![JS Hint screenshot](assets/imagesforreadme/jshintvalidator.PNG)
+The link to the results can be found here - [RPSLS JS Hint Validation results]()
 
 **HTML testing, W3C validator**
 
 ![W3C valdiator screenshot](assets/imagesforreadme/w3chtmlvalidator.PNG)
+The link to the results can be found here - [RPSLS W3C HTML Validation results]()
 
 **CSS testing, Jigsaw validator**
 
 ![Jigsaw validator screenshot](assets/imagesforreadme/w3ccssvalidator.PNG)
+The link to the results can be found here - [RPSLS Jigsaw CSS Validation results]()
 
 **Lighthouse for Desktop results**
 
