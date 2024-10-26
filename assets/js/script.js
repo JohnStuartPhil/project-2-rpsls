@@ -1,6 +1,5 @@
 /**
- * Declare constants for DOM elements
- * and possible choices
+ * Dcelared variables
  */
 let buttons = document.getElementsByClassName("control");
 let playerImage = document.getElementById("player-image");
@@ -18,63 +17,13 @@ let game = `<div class="player">
                 <img id="computer-image" src="assets/images/rpsls.png" alt="Rock Paper Scissors Lizard Spock">
             </div>`;
 
-/**
- * Add event listener to the buttons
- */
-function addListenersToControlButtons() {
-    for (let button of buttons) {
-        button.addEventListener("click", getPlayerChoice);
-    }
-}
-
 function getPlayerChoice(event) {
     let playerChoice = event.target.getAttribute("data-choice");
     playGame(playerChoice);
-}
-
-function removeListenersToControlButtons() {
-    for (let button of buttons) {
-        button.removeEventListener("click", getPlayerChoice);
     }
-}
 
-function addListenerToEndGameButton() {
-    let button = document.getElementById("play-again");
-    button.addEventListener("click", startAgain);
-}
-
-function removeListenerToEndGameButton() {
-    let button = document.getElementById("play-again");
-    button.removeEventListener("click", startAgain);
-}
-
-function startAgain() {
-    removeListenerToEndGameButton();
-    let container = document.getElementById("game-container");
-    container.innerHTML = game;
-    pScore = 0;
-    cScore = 0;
-    playerImage = document.getElementById("player-image");
-    computerImage = document.getElementById("computer-image");
-    addListenersToControlButtons();
-}
-
-function endGameMenu(endOfGame) {
-    let container = document.getElementById("game-container");
-    let heading; 
-    if (endOfGame == "end-player") {
-        heading = `<h2>Player won</h2>`;
-    } else {
-        heading = `<h2>Computer won</h2>`;
-    }
-    let message = `<p>Thank you for playing. To play again click on play again button</p>`;
-    let button = `<button id="play-again">Play again</button>`;
-    container.innerHTML = heading + message + button;
-    addListenerToEndGameButton();
-    }
 /**
- * The main game function. Accepts one paramter, which 
- * is the data choice value of the selected button
+ * Main game function 
  */
 function playGame(playerChoice) {
 
@@ -105,12 +54,54 @@ function playGame(playerChoice) {
     }
 }
 /**
- * The function to set the conditions of the potential outcomes
+ * functions to add and remove event listeners to the five RPSLS buttons
+ */
+function addListenersToControlButtons() {
+    for (let button of buttons) {
+        button.addEventListener("click", getPlayerChoice);
+    }
+}
+
+function removeListenersToControlButtons() {
+    for (let button of buttons) {
+        button.removeEventListener("click", getPlayerChoice);
+    }
+}
+/**
+ * function to display scores and images
+ */
+function startAgain() {
+    removeListenerToEndGameButton();
+    let container = document.getElementById("game-container");
+    container.innerHTML = game;
+    pScore = 0;
+    cScore = 0;
+    playerImage = document.getElementById("player-image");
+    computerImage = document.getElementById("computer-image");
+    addListenersToControlButtons();
+}
+/**
+ * Function to state who won and to give the option to play again
+ */
+function endGameMenu(endOfGame) {
+    let container = document.getElementById("game-container");
+    let heading; 
+    if (endOfGame == "end-player") {
+        heading = `<h2>Player won</h2>`;
+    } else {
+        heading = `<h2>Computer won</h2>`;
+    }
+    let message = `<p>Thank you for playing. To play again click on play again button</p>`;
+    let button = `<button id="play-again">Play again</button>`;
+    container.innerHTML = heading + message + button;
+    addListenerToEndGameButton();
+    }
+/**
+ * Function to set the conditions of the potential outcomes
  */
 function checkWinner(computerChoice, playerChoice) {
     if (computerChoice == playerChoice) {
         return "draw";
-
     } else if (playerChoice == "rock" && computerChoice == "scissors") {
         return "player";
     } else if (playerChoice == "rock" && computerChoice == "paper") {
@@ -119,7 +110,6 @@ function checkWinner(computerChoice, playerChoice) {
         return "player";
     } else if (playerChoice == "rock" && computerChoice == "spock") {
         return "computer";
-
     } else if (playerChoice == "paper" && computerChoice == "rock") {
         return "player";
     } else if (playerChoice == "paper" && computerChoice == "scissors") {
@@ -128,7 +118,6 @@ function checkWinner(computerChoice, playerChoice) {
         return "player";
     } else if (playerChoice == "paper" && computerChoice == "lizard") {
         return "computer";
-
     } else if (playerChoice == "scissors" && computerChoice == "paper") {
         return "player";
     } else if (playerChoice == "scissors" && computerChoice == "rock") {
@@ -137,7 +126,6 @@ function checkWinner(computerChoice, playerChoice) {
         return "player";
     } else if (playerChoice == "scissors" && computerChoice == "spock") {
         return "computer";
-
     } else if (playerChoice == "lizard" && computerChoice == "paper") {
         return "player";
     } else if (playerChoice == "lizard" && computerChoice == "rock") {
@@ -146,7 +134,6 @@ function checkWinner(computerChoice, playerChoice) {
         return "player";
     } else if (playerChoice == "lizard" && computerChoice == "scissors") {
         return "computer";
-
     } else if (playerChoice == "spock" && computerChoice == "rock") {
         return "player";
     } else if (playerChoice == "spock" && computerChoice == "paper") {
@@ -157,7 +144,7 @@ function checkWinner(computerChoice, playerChoice) {
         return "computer";
 }
 /**
- *  The fucntion to give each message of each round
+ *  Fucntion to notify who won each round
  */
 function updateMessage(result) {
     let message;
@@ -168,12 +155,11 @@ function updateMessage(result) {
     } else if (result == "computer") {
         message = "Computer wins this round";
     }
-
     let messagesDiv = document.getElementById("messages");
     messagesDiv.innerHTML = message;
 }
 /**
- *  The function to incrament and update the scores 
+ *  Function to incrament the scores
  */
 function updateScores(result) {
     if (result == "draw") {
@@ -190,6 +176,7 @@ function updateScores(result) {
 }
     scoreSpan.innerHTML = score;
 }
+
 /**
  * The function to end the game when either player or computer reaches 10 points
  */
@@ -202,7 +189,20 @@ function checkEndOfGame() {
     return "next-round";
 }
 /**
- * The function to announce to either continue playing or when the player or the computer wins
+ * functions to add and remove event listeners to the play again button
+ */
+function addListenerToEndGameButton() {
+    let button = document.getElementById("play-again");
+    button.addEventListener("click", startAgain);
+}
+
+function removeListenerToEndGameButton() {
+    let button = document.getElementById("play-again");
+    button.removeEventListener("click", startAgain);
+}
+
+/**
+ * The function to announce to either continue playing or when the player or the computer heas reached 10 points and won
  */
 function updateEndMessage(endOfGame) {
     let endMessage;
