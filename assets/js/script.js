@@ -21,7 +21,6 @@ function getPlayerChoice(event) {
     let playerChoice = event.target.getAttribute("data-choice");
     playGame(playerChoice);
     }
-
 /**
  * Main game function 
  */
@@ -178,7 +177,7 @@ function updateScores(result) {
 }
 
 /**
- * The function to end the game when either player or computer reaches 10 points
+ * Function to breakout of the game when either player or computer reaches 10 points
  */
 function checkEndOfGame() {
     if (pScore === 10) {
@@ -189,7 +188,7 @@ function checkEndOfGame() {
     return "next-round";
 }
 /**
- * functions to add and remove event listeners to the play again button
+ * Functions to add and remove event listeners to the play again button
  */
 function addListenerToEndGameButton() {
     let button = document.getElementById("play-again");
@@ -202,7 +201,7 @@ function removeListenerToEndGameButton() {
 }
 
 /**
- * The function to announce to either continue playing or when the player or the computer heas reached 10 points and won
+ * Function to announce to either continue playing or when the player or the computer heas reached 10 points and won
  */
 function updateEndMessage(endOfGame) {
     let endMessage;
