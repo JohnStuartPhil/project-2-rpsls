@@ -66,8 +66,8 @@ The rules of Rock, Paper, Scissors, Lizard, Spock expand on the rules of Rock, P
 |  6 | Game Area   | Clicked on all of buttons  | The correct images appeared when a random choice was made by the computer (kept clicking until all 5 images had been seen) |  Pass |
 |  7 | Game Area   | Clicked on any of the buttons until either player or computer won 10 times   | The correct message appeared (Player won this round/Computer won this round/This one's a Draw), the player and computer sections with the images disapeared and were replaced with the end message, Player Won or Computer Won   |  Pass |
 | 8 |  End of Game Area  | Clicked on the play again button   | Brought the player and computer sections back up and allowed the playing of another game |  Pass |
-|  9 | Footer   | Clicked on the Click here for instructions button   | Brought up the instructions in a modal and changed the text on the instructions button  |  Pass |
-|  10 | Body   | Clicked anywhere on the screen   | Made the instructions in the Modal dissapear and changed the text back on the   |  Pass |
+|  9 | Footer   | Clicked on the Click here for instructions button   | Brought up the instructions in a modal and changed the text on the instructions button changed to 'click anywhere to close instructions' |  Pass |
+|  10 | Body   | Clicked anywhere on the screen   | Made the instructions in the Modal dissapear and changed the text back on the button to 'click here for instructions'  |  Pass |
 
 **Validator Testing**
 - Javascript
