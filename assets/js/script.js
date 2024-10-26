@@ -2,13 +2,13 @@
  * Declare constants for DOM elements
  * and possible choices
  */
-const buttons = document.getElementsByClassName("control");
+let buttons = document.getElementsByClassName("control");
 let playerImage = document.getElementById("player-image");
 let computerImage = document.getElementById("computer-image");
-const choices = ["rock", "paper", "scissors", "lizard", "spock"];
+let choices = ["rock", "paper", "scissors", "lizard", "spock"];
 let pScore = 0;
 let cScore = 0;
-const game = `<div class="player">
+let game = `<div class="player">
                 <h2 class="scores">Your score: <span id="player-score">0</span></h2>
                 <img id="player-image" src="assets/images/rpsls.png" alt="Rock Paper Scissors Lizard Spock">
             </div>
@@ -19,7 +19,7 @@ const game = `<div class="player">
             </div>`;
 
 /**
- * Add event listener to the functions
+ * Add event listener to the buttons
  */
 function addListenersToControlButtons() {
     for (let button of buttons) {
@@ -67,7 +67,6 @@ function endGameMenu(endOfGame) {
     } else {
         heading = `<h2>Computer won</h2>`;
     }
-       
     let message = `<p>Thank you for playing. To play again click on play again button</p>`;
     let button = `<button id="play-again">Play again</button>`;
     container.innerHTML = heading + message + button;
@@ -105,7 +104,6 @@ function playGame(playerChoice) {
         endGameMenu(endOfGame);
     }
 }
-
 /**
  * The function to set the conditions of the potential outcomes
  */
@@ -158,7 +156,6 @@ function checkWinner(computerChoice, playerChoice) {
     } else if (playerChoice == "spock" && computerChoice == "lizard")
         return "computer";
 }
-
 /**
  *  The fucntion to give each message of each round
  */
@@ -175,7 +172,6 @@ function updateMessage(result) {
     let messagesDiv = document.getElementById("messages");
     messagesDiv.innerHTML = message;
 }
-
 /**
  *  The function to incrament and update the scores 
  */
@@ -194,7 +190,6 @@ function updateScores(result) {
 }
     scoreSpan.innerHTML = score;
 }
-
 /**
  * The function to end the game when either player or computer reaches 10 points
  */
@@ -206,9 +201,8 @@ function checkEndOfGame() {
     } 
     return "next-round";
 }
-
 /**
- * The function to announce to either continue playing or when player or computer wins
+ * The function to announce to either continue playing or when the player or the computer wins
  */
 function updateEndMessage(endOfGame) {
     let endMessage;
