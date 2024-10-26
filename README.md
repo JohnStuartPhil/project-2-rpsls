@@ -146,6 +146,25 @@ The link to the results can be found here - [RPSLS Jigsaw CSS Validation results
 
 The live link can be found here - [Rock, Paper, Scissors, Lizard, Spock](https://johnstuartphil.github.io/project-2.1/)
 
+## Forking the Repository
+- To Folk a repository, the steps are as follows:
+  
+  - Go to the Code tab of the GitHub repository.
+  - Click on the down arrow of the Folk section.
+  - This should create a copy of the repository in your own repository.
+  - This copy could be used for testing purposes only without affecting the main repository.
+
+## Cloning the Repository
+- To make a clone of a repository, the steps are as follows:
+
+  - Go to the Code tab of the GitHub repository.
+  - Click on the down arrow of the green code button.
+  - Select a URL provided and copy it to the clipboard.
+  - Enter the URL into your browser.
+  - Click on the green Gitpod Open button to open up Gitpod.
+  - Type 'git clone'.
+  - This shall bring up the slected repository at the time it was cloned ready to be edited.
+
 ## Credits 
 
 **Content**
@@ -154,7 +173,7 @@ The live link can be found here - [Rock, Paper, Scissors, Lizard, Spock](https:/
 - The icons used for the the Social Media links were taken from [Font Awesome](https://fontawesome.com/).
 - The Fav Icon was constructed from [Fav Icon](https://favicon.io/).
 - The Inter and Kannit fonts were taken from [Google Fonts](https://fonts.google.com/).
-- The Rock, Paper, Scissors, Lizard, Spock images were taken from [The Big Bang Theory Fandom](https://bigbangtheory.fandom.com/wiki/Rock,_Paper,_Scissors,_Lizard,_Spock?)
+- The Rock, Paper, Scissors, Lizard, Spock images were taken from the website [The Big Bang Theory Fandom](https://bigbangtheory.fandom.com/wiki/Rock,_Paper,_Scissors,_Lizard,_Spock?)
 
 **Thanks to**
 
