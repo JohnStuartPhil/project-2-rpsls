@@ -39,8 +39,8 @@ header {
 .control {
     display: inline-block;
     margin: 12px;
-    width: 80px;
-    height: 80px;
+    width: 75px;
+    height: 75px;
 }
 
 #messages {
@@ -107,8 +107,8 @@ footer {
 #play-again {
     display: inline-block;
     margin: 2px;
-    width: 80px;
-    height: 80px;
+    width: 75px;
+    height: 75px;
 }
 
 /* The Modal (background) */
@@ -144,8 +144,8 @@ footer {
   #myBtn {
     display: inline-block;
     margin: 12px;
-    width: 80px;
-    height: 80px;
+    width: 75px;
+    height: 75px;
   }
 
   /* Media queries */
@@ -163,8 +163,9 @@ footer {
     .control {
         display: inline-block;
         margin: 2px;
-        width: 80px;
-        height: 80px;
+        width: 100px;
+        height: 50px;
+        font-size: 15px;
     }
 
     .player {
@@ -204,6 +205,14 @@ footer {
         font-size: 25px;
     }
 
+    #play-again {
+        display: inline-block;
+        margin: 2px;
+        width: 100px;
+        height: 50px;
+        font-size: 15px;
+    }
+
     footer {
         position: absolute;
         width: 100%;
@@ -239,6 +248,12 @@ footer {
     border: 1px solid #888;
     width: 80%; /* Could be more or less, depending on screen size */
   }
+  #myBtn {
+    margin: 2px;
+    width: 250px;
+    height: 50px;
+    font-size: 15px;
+}
   }
 
   @media screen and (min-width: 992px) {
@@ -295,6 +310,14 @@ footer {
 
     .scores {
         font-size: 25px;
+    }
+
+    #play-again {
+        display: inline-block;
+        margin: 2px;
+        width: 150px;
+        height: 75px;
+        font-size: 20px;
     }
 
     footer {
