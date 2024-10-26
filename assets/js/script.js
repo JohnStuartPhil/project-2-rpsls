@@ -1,5 +1,5 @@
 /**
- * Dcelared variables
+ * Variables
  */
 let buttons = document.getElementsByClassName("control");
 let playerImage = document.getElementById("player-image");
@@ -17,10 +17,14 @@ let game = `<div class="player">
                 <img id="computer-image" src="assets/images/rpsls.png" alt="Rock Paper Scissors Lizard Spock">
             </div>`;
 
+/**
+ * Get player choice function 
+ */
 function getPlayerChoice(event) {
     let playerChoice = event.target.getAttribute("data-choice");
     playGame(playerChoice);
     }
+    
 /**
  * Main game function 
  */
@@ -52,8 +56,9 @@ function playGame(playerChoice) {
         endGameMenu(endOfGame);
     }
 }
+
 /**
- * functions to add and remove event listeners to the five RPSLS buttons
+ * Functions to add and remove event listeners to the five RPSLS buttons
  */
 function addListenersToControlButtons() {
     for (let button of buttons) {
@@ -66,8 +71,9 @@ function removeListenersToControlButtons() {
         button.removeEventListener("click", getPlayerChoice);
     }
 }
+
 /**
- * function to display scores and images
+ * Function to display scores and images
  */
 function startAgain() {
     removeListenerToEndGameButton();
@@ -79,22 +85,7 @@ function startAgain() {
     computerImage = document.getElementById("computer-image");
     addListenersToControlButtons();
 }
-/**
- * Function to state who won and to give the option to play again
- */
-function endGameMenu(endOfGame) {
-    let container = document.getElementById("game-container");
-    let heading; 
-    if (endOfGame == "end-player") {
-        heading = `<h2>Player won</h2>`;
-    } else {
-        heading = `<h2>Computer won</h2>`;
-    }
-    let message = `<p>Thank you for playing. To play again click on play again button</p>`;
-    let button = `<button id="play-again">Play again</button>`;
-    container.innerHTML = heading + message + button;
-    addListenerToEndGameButton();
-    }
+
 /**
  * Function to set the conditions of the potential outcomes
  */
@@ -142,6 +133,7 @@ function checkWinner(computerChoice, playerChoice) {
     } else if (playerChoice == "spock" && computerChoice == "lizard")
         return "computer";
 }
+
 /**
  *  Fucntion to notify who won each round
  */
@@ -157,6 +149,7 @@ function updateMessage(result) {
     let messagesDiv = document.getElementById("messages");
     messagesDiv.innerHTML = message;
 }
+
 /**
  *  Function to incrament the scores
  */
@@ -187,8 +180,9 @@ function checkEndOfGame() {
     } 
     return "next-round";
 }
+
 /**
- * Functions to add and remove event listeners to the play again button
+ * Functions to add and remove event listeners to the Play again button
  */
 function addListenerToEndGameButton() {
     let button = document.getElementById("play-again");
@@ -199,6 +193,23 @@ function removeListenerToEndGameButton() {
     let button = document.getElementById("play-again");
     button.removeEventListener("click", startAgain);
 }
+
+/**
+ * Function to state who won and to give the option to play again
+ */
+function endGameMenu(endOfGame) {
+    let container = document.getElementById("game-container");
+    let heading; 
+    if (endOfGame == "end-player") {
+        heading = `<h2>Player won</h2>`;
+    } else {
+        heading = `<h2>Computer won</h2>`;
+    }
+    let message = `<p>Thank you for playing. To play again click on the Play again button</p>`;
+    let button = `<button id="play-again">Play again</button>`;
+    container.innerHTML = heading + message + button;
+    addListenerToEndGameButton();
+    }
 
 /**
  * Function to announce to either continue playing or when the player or the computer heas reached 10 points and won
@@ -218,13 +229,11 @@ function updateEndMessage(endOfGame) {
 
 addListenersToControlButtons();
 
-// Get the modal
+/** 
+ * Modal variables
+ */
 let modal = document.getElementById("myModal");
-
-// Get the button that opens the modal
 let btn = document.getElementById("myBtn");
-
-// Get the <span> element that closes the modal
 let span = document.getElementsByClassName("close")[0];
 
 btn.addEventListener("click", openInstructionsModal);
@@ -239,7 +248,6 @@ function openInstructionsModal() {
 }
 
 modal.addEventListener("click", closeInstructionsModal);
-span.addEventListener("click", closeInstructionsModal);
 
 /**
  * Funtion to close the Modal
