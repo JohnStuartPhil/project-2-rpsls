@@ -24,7 +24,7 @@ function getPlayerChoice(event) {
     let playerChoice = event.target.getAttribute("data-choice");
     playGame(playerChoice);
     }
-    
+
 /**
  * Main game function 
  */
@@ -234,7 +234,6 @@ addListenersToControlButtons();
  */
 let modal = document.getElementById("myModal");
 let btn = document.getElementById("myBtn");
-let span = document.getElementsByClassName("close")[0];
 
 btn.addEventListener("click", openInstructionsModal);
 
