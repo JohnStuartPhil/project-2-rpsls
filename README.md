@@ -48,11 +48,17 @@ The rules of Rock, Paper, Scissors, Lizard, Spock expand on the rules of Rock, P
 ![Modal before button pressed](assets/imagesforreadme/modalbeforebuttonpressed.PNG)
 ![Modal showing instructions](assets/imagesforreadme/modalshowinginstructions.PNG)
 
-- **Instructions**
+- **For mobile screens**
 
-  - The buttons on mobile screens were intentially made square-shaped to make it easier to touch using a finger
+  - The buttons on mobile screens were intentially made square-shaped to make it easier to touch using a finger.
 
   ![Mobile screen at the start of the game](assets/imagesforreadme/mobileatstart.PNG) ![Mobile screen at the end of the game](assets/imagesforreadme/mobileatend.PNG)
+
+**For tablet screens**
+
+  - The rock/paper/scissors/lizard/spock buttons on tablet screens were intentially made square-shaped to make it easier to touch using a finger, while the buttons for instructions and to play again were made intentially rectangle.
+
+  ![Tablet screen at the start of the game](assets/imagesforreadme/tabletatstart.PNG) ![Tablet screen at the end of the game](assets/imagesforreadme/tabletatend.PNG)
 
 ## Testing 
   - I tested the webpage in different browsers: Chrome, Microsoft Edge and WaveBrowser.
