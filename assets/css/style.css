@@ -141,6 +141,12 @@ footer {
     cursor: pointer;
   }
 
+  #myBtn {
+    display: inline-block;
+    margin: 12px;
+    width: 80px;
+    height: 80px;
+  }
 
   /* Media queries */
   @media screen and (min-width: 768px) {
@@ -150,11 +156,15 @@ footer {
         font-size: 35px;
     }
 
+    .game-area {
+        padding-top: 1rem;
+    }
+
     .control {
         display: inline-block;
         margin: 2px;
         width: 80px;
-        height: 40px;
+        height: 80px;
     }
 
     .player {
@@ -240,7 +250,7 @@ footer {
         display: inline-block;
         margin: 2px;
         width: 80px;
-        height: 40px;
+        height: 80px;
     }
     .player {
         padding-top: 1rem;
@@ -314,4 +324,11 @@ footer {
     border: 1px solid #888;
     width: 80%; /* Could be more or less, depending on screen size */
   }
+
+  #myBtn {
+        margin: 2px;
+        width: 80px;
+        height: 80px;
+}
+
   }
