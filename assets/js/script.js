@@ -63,7 +63,7 @@ function endGameMenu(endOfGame) {
     let container = document.getElementById("game-container");
     let heading; 
     if (endOfGame == "end-player") {
-        heading = `<h2>You won</h2>`;
+        heading = `<h2>Player won</h2>`;
     } else {
         heading = `<h2>Computer won</h2>`;
     }
@@ -242,7 +242,7 @@ btn.addEventListener("click", openInstructionsModal);
 function openInstructionsModal() {
     modal.style.display = "block";
     let modalButton = document.getElementById('myBtn');
-    modalButton.textContent = "Click anywhere to close";
+    modalButton.textContent = "Click anywhere to close instructions";
 }
 
 modal.addEventListener("click", closeInstructionsModal);
