@@ -2,10 +2,10 @@
 
 # Rock, Paper, Scissors, Lizard, Spock
 
-Rock, Paper, Scissors, Lizard, Spock is a game invented by Sam Kass. It expands on the existing game of Rock, Paper Scissors. 
+Rock, Paper, Scissors, Lizard, Spock is a game invented by Sam Kass, which expands on the existing game of Rock, Paper Scissors. 
 The rules of Rock, Paper Scissors are as follows: scissors cuts paper, paper covers rock, rock crushes scissors. 
 
-The rules of Rock, Paper, Scissors, Lizard, Spock expand on the rules of Rock, Paper, Scissors and give a possible 10 outsomes: Scissors cuts Paper, Paper covers Rock, Rock crushes lizard, lizard poisons Spock, Spock smashes scissors, Scissors decapitates lizard, Lizard eats paper, Paper disproves Spock, Spock vaporizes rock, Rock crushes scissors. 
+The rules of Rock, Paper, Scissors, Lizard, Spock give a possible 10 outsomes: Scissors cuts Paper, Paper covers Rock, Rock crushes lizard, lizard poisons Spock, Spock smashes scissors, Scissors decapitates lizard, Lizard eats paper, Paper disproves Spock, Spock vaporizes rock, Rock crushes scissors. 
 
 ![Website displayed on multiple screens](assets/imagesforreadme/amiresponsive.PNG)
 
@@ -26,9 +26,9 @@ The rules of Rock, Paper, Scissors, Lizard, Spock expand on the rules of Rock, P
 
 - **The Game Results**
 
-  - When the user clicks an option, the image relating to their choice is shown on their side of the game board. 
-  - The Javascript code chooses a random option for the computer player, displays the image relating to the computer's choice, and then determines who the winner is. 
-  - The winner is announced to the user under the options button and the score is updated for either the user or the computer, depending on who won. 
+  - When the user clicks on an option, the image relating to their choice is shown on the left side of the game area. 
+  - The Javascript code chooses a random option for the computer player, displays the image relating to the computer's choice is shown on the left side of the game aresa. Both images appear instantly and determines who the winner is. 
+  - The winner is displayed to the user under the Rock/Paper/Scissors/Lizard Spock option buttons and the score is updated for either the user or the computer, depending on who won. 
   - The results and score are clear to the user, making the game easy to play, understand who won, and what the score is.
 
   **At the start of the game:**
@@ -46,6 +46,9 @@ The rules of Rock, Paper, Scissors, Lizard, Spock expand on the rules of Rock, P
   - The instructions are in a pop-up modal which is featured in the footer of the website. 
 
 ![Modal before button pressed](assets/imagesforreadme/modalbeforebuttonpressed.PNG)
+
+  - When the instructions button is pressed, they appear in the Modal.
+
 ![Modal showing instructions](assets/imagesforreadme/modalshowinginstructions.PNG)
 
 - **For mobile screens**

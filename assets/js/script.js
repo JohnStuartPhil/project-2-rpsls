@@ -1,13 +1,13 @@
 /**
  * Variables
  */
-let buttons = document.getElementsByClassName("control");
+const buttons = document.getElementsByClassName("control");
 let playerImage = document.getElementById("player-image");
 let computerImage = document.getElementById("computer-image");
-let choices = ["rock", "paper", "scissors", "lizard", "spock"];
+const choices = ["rock", "paper", "scissors", "lizard", "spock"];
 let pScore = 0;
 let cScore = 0;
-let game = `<div class="player">
+const game = `<div class="player">
                 <h2 class="scores">Your score: <span id="player-score">0</span></h2>
                 <img id="player-image" src="assets/images/rpsls.png" alt="Rock Paper Scissors Lizard Spock">
             </div>
