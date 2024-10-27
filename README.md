@@ -41,6 +41,10 @@ The rules of Rock, Paper, Scissors, Lizard, Spock give a possible 10 outsomes: S
   **At the end of the game:**
 ![End of Game](assets/imagesforreadme/endofgame.PNG)
 
+  - When the play again button is pressed, it allows the user to select the Rock/Paper/Scissors/Lizard/Spock buttons again and play another game. 
+
+![Play again button](assets/imagesforreadme/playagainbutton.PNG)
+
 - **Instructions**
 
   - The instructions are in a pop-up modal which is featured in the footer of the website. 
@@ -64,7 +68,7 @@ The rules of Rock, Paper, Scissors, Lizard, Spock give a possible 10 outsomes: S
   ![Tablet screen at the start of the game](assets/imagesforreadme/tabletatstart.PNG) ![Tablet screen at the end of the game](assets/imagesforreadme/tabletatend.PNG)
 
 ## Testing 
-  - I tested the webpage in different browsers: Chrome, Microsoft Edge and WaveBrowser.
+  - I tested the webpage in different browsers: Chrome, Firefox, Microsoft Edge and WaveBrowser.
   - I confirmed that the game results are always correct.
   - I confirmed that the header, instructions in the modal (in the footer) are all readable and easy to understand. 
   - I confimred that the colors and fonts chosen are easy to read and accessiable by running it through Lighthouse in Dev tools
@@ -86,7 +90,7 @@ The rules of Rock, Paper, Scissors, Lizard, Spock give a possible 10 outsomes: S
 
 **Validator Testing**
 - Javascript
-  - No errors were retunred when passing through the official JS Hint.
+  - No errors were retunred when passing through the official JS Hint (New Javascript features (ES6) assumed).
 - HTML 
   - No errors were retunred when passing through the official W3C validator.
 - CSS 
@@ -132,7 +136,7 @@ The link to the results can be found here - [RPSLS Jigsaw CSS Validation results
 
 ![Images not loading on a mobile screen in DevTools](assets/imagesforreadme/missingpicturesonmobilescreens.PNG)
 
-   - With assitance from tutoring, it turned out that this was an issue with the internet at my end.
+   - With assitance from tutoring, it turned out that this was possibly an issue with the internet connection at my end.
 
 ![Internet Dropping](assets/imagesforreadme/internetdropping.PNG)
 
@@ -171,7 +175,7 @@ The live link can be found here - [Rock, Paper, Scissors, Lizard, Spock](https:/
 ## Credits 
 
 **Content**
-- Initial code HMTL, CSS and JS code was taken from the scoping video for the Rock Paper Scissors project and amended accordingly. 
+- Initial code HMTL, CSS and JS code was taken from the Code Institute scoping video for the Rock Paper Scissors project and amended accordingly. 
 - Initial code for the Modal was taken from [W3Schools] (www.w3schools.com/howto/howto_css_modals.asp) and amended accordingly. 
 - The icons used for the the Social Media links were taken from [Font Awesome](https://fontawesome.com/).
 - The Fav Icon was constructed from [Fav Icon](https://favicon.io/).
