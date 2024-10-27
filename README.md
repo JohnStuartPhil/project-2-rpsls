@@ -3,9 +3,9 @@
 # Rock, Paper, Scissors, Lizard, Spock
 
 Rock, Paper, Scissors, Lizard, Spock is a game invented by Sam Kass, which expands on the existing game of Rock, Paper Scissors. 
-The rules of Rock, Paper Scissors are as follows: scissors cuts paper, paper covers rock, rock crushes scissors. 
+The rules of Rock, Paper Scissors are as follows: Scissors cuts Paper, Paper covers Rock, Rock crushes Scissors. 
 
-The rules of Rock, Paper, Scissors, Lizard, Spock give a possible 10 outsomes: Scissors cuts Paper, Paper covers Rock, Rock crushes lizard, lizard poisons Spock, Spock smashes scissors, Scissors decapitates lizard, Lizard eats paper, Paper disproves Spock, Spock vaporizes rock, Rock crushes scissors. 
+The rules of Rock, Paper, Scissors, Lizard, Spock give a possible 10 outsomes: Scissors cuts Paper, Paper covers Rock, Rock crushes Lizard, Lizard poisons Spock, Spock smashes Scissors, Scissors decapitates Lizard, Lizard eats Paper, Paper disproves Spock, Spock vaporizes Rock, Rock crushes Scissors. 
 
 ![Website displayed on multiple screens](assets/imagesforreadme/amiresponsive.PNG)
 
@@ -20,7 +20,7 @@ The rules of Rock, Paper, Scissors, Lizard, Spock give a possible 10 outsomes: S
 
 - **The Game Options**
 
-  - The game options include a clear instruction and then a choice of options to choose from and to play: Rock, Paper, Scissors, Lizard or Spock. These options are interactive buttons that the user can click to make their choice and play their game. 
+  - The game options include a clear instruction and then a choice of options to choose from and to play: Rock, Paper, Scissors, Lizard or Spock. These options are interactive buttons that the user can click to make their choice and play the game. 
 
 ![Click a button below to start](assets/imagesforreadme/clickabuttonbelowtostart.PNG)
 
